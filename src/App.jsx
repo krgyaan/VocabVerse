@@ -18,11 +18,10 @@ const App = () => {
     }
   }
 
-  console.log(meaning);
-
   useEffect(() => {
     wordDetails();
   }, [word, lang]);
+
   return (
     <main className="max-w-screen-lg m-auto min-h-screen">
       <h1 className="text-4xl md:text-6xl font-bold text-center pt-5">VocabVerse</h1>
@@ -33,10 +32,9 @@ const App = () => {
         word={word}
         setWord={setWord}
       />
-      <Result
-        word={word}
-        meaning={meaning}
-      />
+      {
+        meaning && <Result word={word} meaning={meaning} />
+      }
     </main>
   )
 }
