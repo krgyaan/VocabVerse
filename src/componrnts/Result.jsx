@@ -7,7 +7,7 @@ const Result = ({ word, meaning }) => {
                 word === ''
                     ? <h1 className='text-2xl md:text-4xl font-bold text-center pt-5'>Enter a word to get its meaning</h1> :
                     <div className='flex justify-between flex-col sm:flex-row gap-5'>
-                        <div className='w-full bg-gray-100 p-5 rounded-xl'>
+                        <div className='w-full bg-gray-100 p-5 rounded-xl max-h-96 overflow-y-scroll'>
                             <div className='flex justify-between'>
                                 <h2 className='text-2xl font-bold'>
                                     Meaning Of : {word}
@@ -41,14 +41,14 @@ const Result = ({ word, meaning }) => {
                                                     item.meanings.map((item, index) => {
                                                         return (
                                                             <p key={index} className=''>
-                                                                <h2 className='bg-indigo-600 text-white pt-1'>
+                                                                <p className='bg-indigo-600 text-white pt-1'>
                                                                     <span className="text-lg font-bold">
                                                                         Part of Speech: &nbsp;
                                                                     </span>
                                                                     <span>
                                                                         {item.partOfSpeech}
                                                                     </span>
-                                                                </h2>
+                                                                </p>
                                                                 {
                                                                     item.antonyms.length > 0 &&
                                                                     <p className='bg-indigo-500 pt-1'>

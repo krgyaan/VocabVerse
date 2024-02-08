@@ -25,3 +25,7 @@ audio::-webkit-media-controls-panel {
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display,
 audio::-webkit-media-controls-volume-slider-container */
+
+.text-medium.custom-input-lg {
+    font-size: 30px;
+}
